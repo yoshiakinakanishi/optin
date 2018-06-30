@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="application-name" content="DMM.com">
+  <meta name="msapplication-tooltip" content="DVDレンタル、通販、動画配信、FX等の総合サイト">
+  <meta name="msapplication-starturl" content="/" />
+  <meta name="msapplication-window" content="width=1280;height=1024">
+  <meta name="msapplication-navbutton-color" content="#222222">
+  <meta name="msapplication-task" content="name=動画サービス;action-uri=/digital/;icon-uri=https://www.dmm.com/images/common/pinned/task.ico">
+  <meta name="msapplication-task" content="name=DVD/CDレンタルサービス;action-uri=/rental/;icon-uri=https://www.dmm.com/images/common/pinned/task.ico">
+  <meta name="msapplication-task" content="name=通販サービス;action-uri=/mono/;icon-uri=https://www.dmm.com/images/common/pinned/task.ico">
+  <meta name="Slurp" content="NOYDIR">
+  <link href="https://www.dmm.com/css/base.css" media="screen" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="manifest" href="manifest.json">
+  <link href="https://p.dmm.com/p/common/pinned/general/favicon.ico" rel="shortcut icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="./pushlib-bundle.js"></script>
+  <script src="./index.js"></script>
+  <title>プッシュ通知設定 - DMM.com</title>
+</head>
+
+<body>
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T2DRSB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-T2DRSB');
+  </script>
+  <!-- End Google Tag Manager -->
+  <div id="dmmCommon__header"></div>
+  <div class="push__notSupport">
+    <div class="title">お使いのブラウザは対象外です</div>
+    <div class="content">
+      <p>現在ご利用のブラウザには対応しておりません。</p>
+      <p>恐れ入りますが、対象ブラウザにてご覧いただきますようお願いいたします。</p>
+      <div class="target__browser">
+        <p>対象ブラウザ</p>
+        <p>Chrome(最新版)</p>
+        <p>Firefox(最新版)</p>
+      </div>
+      <p><a href="%top_url%">お客様情報トップへ戻る</a></p>
+    </div>
+  </div>
+  <!-- .push__notSupport END -->
+  <div class="wrap">
+    <div class="push">
+      <h1 class="push__mainTitle push__popupAnchor">プッシュ通知設定</h1>
+      <div class="push__subTitle">DMM.comからお得な最新情報を"プッシュ通知"でお届けします。</div>
+      <div class="push__attention">※プッシュ通知を有効にする際は、表示されたダイアログの「許可」をタップしてください。</div>
+
+      <div class="pushBox pushBox__first">
+        <div class="pushInnerBox">
+          <p>キャンペーン情報を受け取る</p>
+        </div>
+        <div class="toggleSW__wrap">
+          <label>
+          <input class="checkbox-input" data-taid="campaign" name="pushregister" type="checkbox" id="register1">
+          <span class="checkbox-parts"></span>
+        </label>
+        </div>
+      </div>
+
+      <div class="pushBox pushBox">
+        <div class="pushInnerBox">
+          <p>新規サービス情報を受け取る</p>
+        </div>
+        <div class="toggleSW__wrap">
+          <label>
+          <input class="checkbox-input" data-taid="service" name="pushregister" type="checkbox" id="register2">
+          <span class="checkbox-parts"></span>
+        </label>
+        </div>
+      </div>
+
+      <div class="pushBox pushBox__third">
+        <div class="pushInnerBox">
+          <p>DMMからのお知らせを受け取る</p>
+        </div>
+        <div class="toggleSW__wrap">
+          <label>
+          <input class="checkbox-input" data-taid="common" name="pushregister" type="checkbox" id="register3">
+          <span class="checkbox-parts"></span>
+        </label>
+        </div>
+      </div>
+
+      <div class="push__subTitle pushText">プッシュ通知設定とは</div>
+      <div class="push__howAbout">
+        <div class="push__howAboutText">DMM.comの最新情報、お得なセール・キャンペーン情報などを<br> デスクトップ、またはスマートフォンから、いち早くユーザの皆様にお届けします。
+        </div>
+        <div class="push__pushImage">
+          <img src="https://p.dmm.com/p/pf/page/push/push_sample_pc.png" width="95%" alt="sample">
+        </div>
+        <div class="push__howAbout__attention">
+          <p>※画像はイメージになります。</p>
+          <p>※プッシュ通知の対応環境は<a href="http://help.dmm.com/-/detail/=/qid=45856/">こちら</a>。</p>
+          <p>※その他の設定環境</p>
+          <p>・R18版のプッシュ設定は<a href="%guide_url%">こちら</a>から設定ください。</p>
+          <p>・別のブラウザでプッシュ通知を行っている場合はブラウザごとに設定解除を行う必要があります。</p>
+          <p>・プッシュ通知に関してご不明な点がある場合は<a href="http://help.dmm.com/-/list/=/mid=121/sid=880/">ヘルプ</a>をご確認ください。</p>
+        </div>
+      </div>
+      <!-- .howAbout END -->
+    </div>
+    <!-- .push END -->
+
+    <div class="push__popup">
+      <div class="push__popupOverlay"></div>
+      <div class="push__popupWrap">
+        <div class="push__popupHeader">
+          <p>ログインエラー</p>
+        </div>
+        <div class="push__popupError"><img src="https://p.dmm.com/p/pf/icon/exclamation.svg" width="28"></div>
+        <div class="push__popupContent">
+          <p>メールアドレス・パスワードに誤りがあるか、登録されていません。</p>
+          <p>5秒後にページが切り替わります。画面が切り替わらない場合は、<a id="push__popupURL" href="%transition_url%">こちら</a>をクリックしてください。</p>
+        </div>
+        <!-- .push__popupContent END -->
+      </div>
+      <!-- .push__popupWrap END -->
+    </div>
+    <!-- .push__popup END -->
+
+  </div>
+  <!-- .wrap END -->
+  <div id="dmmCommon__footer"></div>
+</body>
+
+</html>

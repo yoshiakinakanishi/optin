@@ -1,0 +1,235 @@
+@charset "UTF-8";
+.push div, .push span,
+.push h1, .push h2, .push h3, .push h4, .push h5, .push h6, .push p,
+.push a, .push address,.push em, .push img, .push q, .push s,
+.push strong,.push i,
+.push dl, .push dt, .push dd, .push ol, .push ul, .push li,
+.push fieldset, .push form, .push label, .push legend,
+.push table, .push tbody, .push tfoot, .push thead, .push tr, .push th, .push td {
+  margin: 0;
+  padding: 0;
+  font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+body {
+  z-index: 1;
+}
+
+.wrap {
+  overflow-x: hidden;
+  background: #f2f4f7;
+}
+
+.push {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.push .push__mainTitle {
+  width: 100%;
+  margin: 15px auto;
+  padding-left: 25px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.push .push__mainTitle::before {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 22px;
+  height: 22px;
+  margin: auto;
+  background-image: url(https://p.dmm.com/p/pf/icon/ico_push.svg); 
+  background-repeat: no-repeat;
+  -webkit-background-size: 22px auto;
+  background-size: 22px auto;
+  content: "";
+}
+
+.push .push__subTitle {
+  width: 100%;
+  margin: 0px auto;
+  font-size: 16px;
+}
+
+.push .pushText {
+  margin-top: 20px; 
+}
+
+.push .pushInnerBox {
+  font-size: 16px;
+}
+
+.push .pushBox {
+  position: relative;
+  margin: 0 auto;
+  height: 70px;
+  line-height: 70px;
+  background: #fff;
+  padding-left: 15px;
+  font-weight: bold;
+  border-bottom: 2px solid #f2f4f7;
+}
+
+.push .checkbox-parts {
+  cursor: pointer;
+}
+
+.push .pushBox__first {
+  border-radius: 5px 5px 0px 0px;
+}
+
+.push .pushBox__third {
+  border-radius: 0px 0px 5px 5px;
+}
+
+.push .push__howAbout {
+  margin: 10px 0 15px 0; 
+  background: #fff;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+.push__howAbout > p {
+  font-size: 16px;
+}
+
+.push .push__pushImage {
+  text-align: center;
+  margin: 0px 15px 10px 15px;
+}
+
+.push__howAbout__attention > p {
+  font-size: 14px;
+}
+
+/*-- toggle switch --*/
+.push .toggleSW__wrap {
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  width: 75px;
+  height: 35px;
+}
+
+.checkbox-input{
+  display: none;
+}
+
+.checkbox-parts::before{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 70px;
+  height: 35px;
+  border-radius: 50px;
+  background: #b9b8b8;
+  display: block;
+}
+
+.checkbox-parts::after{
+  content: "";
+  display: block;
+  margin-top: 4px;
+  position: absolute;
+  left: 5px;
+  width: 27px;
+  height: 27px;
+  background: #eee;
+  border-radius: 50%;
+  transition:.4s ease;
+  box-shadow: 0 0 4px rgba(0,0,0,0.4);
+}
+
+.checkbox-input:checked + .checkbox-parts::before {
+  background: #00BCD6;
+}
+
+.checkbox-input:checked + .checkbox-parts::after {
+  left: 38px;
+}
+
+.push__popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  z-index: 100;
+}
+
+.push__popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.push__popupWrap {
+  position: relative;
+  width: 80%;
+  height: 100px;
+  margin: 0 auto;
+  padding-top: 60px;
+  background-color: #f2f4f7;
+  border-radius: 6px;
+}
+
+.push__popupError {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+.push__popupHeader {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;  
+  border-radius: 6px 6px 0 0;
+  background-color: #fff; 
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.push__popupHeader > p{
+  margin-left: 50px;
+}
+
+.push__popupContent {
+  margin: 5px 20px;
+  font-size: 11px;
+}
+
+/*-- unsupported browser --*/
+.push__notSupport {
+  display: none;
+  width: 90%;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+.push__notSupport .title {
+  padding: 40px 0 20px 0;
+  font-size: 18px;
+  font-weight: lighter;
+  border-bottom: 1px solid #000;
+}
+
+.push__notSupport .content {
+  font-size: 12px;
+  margin-top: 20px; 
+}
+
+.push__notSupport .target__browser {
+  font-size: 16px;
+  margin: 30px 0;
+}

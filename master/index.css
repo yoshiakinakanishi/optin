@@ -1,0 +1,278 @@
+@charset "UTF-8";
+.push div, .push span,
+.push h1, .push h2, .push h3, .push h4, .push h5, .push h6, .push p,
+.push a, .push address,.push em, .push img, .push q, .push s,
+.push strong,.push i,
+.push dl, .push dt, .push dd, .push ol, .push ul, .push li,
+.push fieldset, .push form, .push label, .push legend,
+.push table, .push tbody, .push tfoot, .push thead, .push tr, .push th, .push td {
+  margin: 0;
+  padding: 0;
+  font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+.wrap {
+  position: relative;
+  min-width: 1024px;
+  overflow-x: hidden;
+  background: #f2f4f7;
+  margin: 0 -10px;
+}
+
+.push {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.push .push__mainTitle {
+  width: 100%;
+  margin: 20px auto;
+  padding-left: 32px;
+  font-size: 26px;
+  font-weight: lighter;
+  background: #f2f4f7;
+}
+
+.push .push__mainTitle:before {
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin: auto;
+  background-image: url(https://p.dmm.com/p/pf/icon/ico_push.svg); 
+  background-repeat: no-repeat;
+  -webkit-background-size: 30px auto;
+  background-size: 30px auto;
+  content: "";
+}
+
+.push .push__subTitle {
+  width: 100%;
+  margin: 30px auto 10px auto;
+  margin-top: 0px;
+  font-size: 18px;
+}
+
+.push .pushText {
+  margin-top: 20px; 
+}
+
+.push .push__attention {
+  width: 100%;
+  margin: 0px auto 15px auto;
+  font-size: 15px;
+  color: #808080;
+}
+
+.push .pushBox {
+  position: relative;
+  width: 100%;
+  font-weight: bold;
+  margin: 0 auto;
+  height: 70px;
+  line-height: 70px;
+  background: #fff;
+  border-bottom: 2px solid #f2f4f7;
+}
+
+.push .checkbox-parts {
+  cursor: pointer;
+}
+
+.push .pushBox__first {
+  border-radius: 5px 5px 0px 0px;
+}
+
+.push .pushBox__third {
+  border-radius: 0px 0px 5px 5px;
+}
+
+.push .pushInnerBox {
+  padding-left: 40px;
+  font-size: 20px;
+}
+
+.push .push__howAbout {
+  width: 100%;
+  margin: 15px auto;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.push .push__howAboutText {
+  display: block;
+  padding: 20px 40px 20px 40px;
+  font-size: 14px;
+}
+
+.push .push__pushImage {
+  margin: 0 0 20px 40px;
+}
+
+.push .push__howAbout__attention {
+  font-size: 12px;
+  margin: 0 0 20px 40px; 
+  padding-bottom: 20px;
+}
+
+/*-- toggle switch --*/
+.push .toggleSW__wrap {
+  position: absolute;
+  top: 13px;
+  right: 40px;
+  width: 85px;
+  height: 45px;
+}
+
+.checkbox-input{
+  display: none;
+}
+
+.checkbox-parts::before{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 85px;
+  height: 45px;
+  border-radius: 50px;
+  background: #b9b8b8;
+  display: block;
+}
+
+.checkbox-parts::after{
+  content: "";
+  display: block;
+  margin-top: 5px;
+  position: absolute;
+  left: 5px;
+  width: 35px;
+  height: 35px;
+  background: #eee;
+  border-radius: 50%;
+  transition:.4s ease;
+  box-shadow: 0 0 4px rgba(0,0,0,0.4);
+}
+
+.checkbox-input:checked + .checkbox-parts::before {
+  background: #00BCD6;
+}
+
+.checkbox-input:checked + .checkbox-parts::after {
+  left: 45px;
+}
+
+.push__popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 300px;
+}
+
+.push__popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.push__popupWrap {
+  position: relative;
+  width: 50%;
+  min-width: 720px; 
+  height: 120px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-left: 40px;
+  background-color: #f2f4f7;
+  border-radius: 6px;
+}
+
+.push__popupError {
+  position: absolute;
+  top: 22px;
+  left: 40px;
+}
+
+.push__popupHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+  background-color: #fff; 
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.push__popupHeader > p {
+  margin-left: 85px;
+}
+
+.push__popupContent {
+  margin-top: 35px;
+  font-size: 14px;
+}
+
+/*-- unsupported browser --*/
+.push__notSupport {
+  display: none;
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.push__notSupport .title {
+  padding: 50px 0 30px 0;
+  font-size: 25px;
+  font-weight: lighter;
+  border-bottom: 1px solid #000;
+}
+
+.push__notSupport .content {
+  font-size: 14px;
+  margin-top: 30px; 
+}
+
+.push__notSupport .target__browser {
+  font-size: 18px;
+  margin: 60px 0;
+}
+
+/*-- subfooterNav style --*/
+#footer {
+  margin-top: 0;
+  border-top:1px solid #e9ebef;
+}
+
+#footer .wp-info {
+  display: none;
+}
+
+#footer .anchor {
+  display: none;
+}
+
+#footer ul.ft-nav li a {
+  color: #005fc0;
+}
+
+#footer p.copy small {
+  color: #000;
+}
+
+#footer ul.ft-nav {
+  background: #fff;
+}
+
+#footer p.copy {
+  background: #fff;
+}

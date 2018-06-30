@@ -1,0 +1,39 @@
+{
+  "name": "optin-page",
+  "version": "1.0.0",
+  "repository": "ssh://git@git.dmm.com/ntpf/optin-page.git",
+  "license": "MIT",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint ./js",
+    "fmt": "./node_modules/.bin/prettier-eslint --write ./js/*.js && ./node_modules/.bin/js-beautify -r --type html -s 2 -f *.html",
+    "build-dev-com": "./node_modules/.bin/webpack --config ./webpack/config.develop.com.js",
+    "build-dev-r18": "./node_modules/.bin/webpack --config ./webpack/config.develop.r18.js",
+    "build-stg-com": "./node_modules/.bin/webpack --config ./webpack/config.staging.com.js",
+    "build-stg-r18": "./node_modules/.bin/webpack --config ./webpack/config.staging.r18.js",
+    "build-prd-com": "./node_modules/.bin/webpack --optimize-minimize --config ./webpack/config.production.com.js",
+    "build-prd-r18": "./node_modules/.bin/webpack --optimize-minimize --config ./webpack/config.production.r18.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "copy-webpack-plugin": "^4.1.1",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "html-webpack-plugin": "^2.30.1",
+    "interpolate-html-plugin": "^2.0.0",
+    "js-beautify": "^1.7.4",
+    "path": "^0.12.7",
+    "prettier-eslint": "^8.2.1",
+    "prettier-eslint-cli": "^4.4.0",
+    "webpack": "^3.8.1",
+    "webpack-merge": "^4.1.0"
+  },
+  "dependencies": {
+    "encoding-japanese": "^1.0.26",
+    "jquery": "^3.2.1"
+  }
+}

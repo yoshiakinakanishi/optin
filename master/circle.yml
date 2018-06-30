@@ -1,0 +1,38 @@
+machine:
+  node:
+    version: 6.9.1
+  timezone: Asia/Tokyo
+  post:
+    - curl -o- -L https://yarnpkg.com/install.sh | bash
+
+dependencies:
+  cache_directories:
+    - "~/.cache/yarn"
+  pre:
+    # - sh ./circleci/pre_test.sh
+    - sudo pip install awscli
+  override:
+    - yarn install
+test:
+  override:
+    - echo "There is no test"
+
+deployment:
+  master:
+    branch: master
+    commands:
+    - yarn build-dev-com
+    - aws s3 cp ~/optin-page/dest s3://optin-push/com/development/push --recursive
+    - yarn build-dev-r18
+    - aws s3 cp ~/optin-page/dest s3://optin-push/co.jp/development/push --recursive
+    - yarn build-stg-com
+    - aws s3 cp ~/optin-page/dest s3://optin-push/com/staging/push --recursive
+    - yarn build-stg-r18
+    - aws s3 cp ~/optin-page/dest s3://optin-push/co.jp/staging/push --recursive
+  production:
+    branch: production
+    commands:
+    - yarn build-prd-com
+    - aws s3 cp ~/optin-page/dest s3://optin-push/com/production/push --recursive
+    - yarn build-prd-r18
+    - aws s3 cp ~/optin-page/dest s3://optin-push/co.jp/production/push --recursive

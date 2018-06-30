@@ -1,0 +1,7 @@
+{
+  "manifest_version": 2,
+  "name": "DMM.com Push",
+  "short_name": "DMM.com Push",
+  "display": "standalone",
+  "gcm_sender_id": "825369293119"
+}
